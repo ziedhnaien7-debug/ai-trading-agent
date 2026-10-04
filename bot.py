@@ -9,9 +9,9 @@ LIMIT = 50
 
 def get_prices():
     url = (
-        f"https://api.binance.com/api/v3/klines"
-        f"?symbol={SYMBOL}&interval={INTERVAL}&limit={LIMIT}"
-    )
+    f"https://api.binance.us/api/v3/klines"
+    f"?symbol={SYMBOL}&interval={INTERVAL}&limit={LIMIT}"
+)
 
     with urllib.request.urlopen(url, timeout=10) as response:
         data = json.loads(response.read().decode())
